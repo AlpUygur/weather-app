@@ -7,6 +7,8 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 
+//Define port number from environment variable if it is running at Heroku else it can be your choice
+const port = process.env.PORT || 3000
 //Define path for Express config
 const dir = path.join(__dirname, '../public')
 //Define path for hbs partials
@@ -78,6 +80,6 @@ app.get('*', (request, response) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("Server is up on port 3000.")
+app.listen(port, () => {
+    console.log("Server is up on port " + port)
 })
