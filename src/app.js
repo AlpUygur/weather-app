@@ -38,7 +38,8 @@ app.get('/about', (request, response) => {
 app.get('/help', (request, response) => {
     response.render('help', {
         title: 'Help',
-        name: 'Alp Uygur'
+        name: 'Alp Uygur',
+        helpText: "Node.js Web app for getting forecast data of given address."
     })
 })
 
